@@ -1,0 +1,13 @@
+The most popular three articles:
+Candidate is jerk, alleges rival -- 338647views
+Bears love berries, alleges bear -- 253801views
+Bad things gone, say good people -- 170098views
+--------------------------------------
+The authors with the most popular in the top:
+Ursula La Multa -- 507594views
+Rudolf von Treppenwitz -- 423457views
+Anonymous Contributor -- 170098views
+Markoff Chaney -- 84557views
+--------------------------------------
+The dates when errors rate greater than 1%:
+2016-07-17 -- 2.26% errors
