@@ -17,6 +17,8 @@ Below are the snippets of the database:
 
 Table "authors"
 Column |  Type   |
+
+
 --------+---------+
  name   | text    |
  bio    | text    |
