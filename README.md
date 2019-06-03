@@ -16,6 +16,7 @@ The database contains newspaper articles, as well as the web server log for the 
 Below are the snippets of the database:
 
 Table "authors"
+
 Column |  Type   
 -------|---------
 name   | text    
@@ -23,22 +24,24 @@ bio    | text
 id     | integer 
 
 Table "articles"
- Column |           Type           |
---------+--------------------------+
- author | integer                  |
- title  | text                     |
- slug   | text                     |
- lead   | text                     |
- body   | text                     |
- time   | timestamp with time zone |
- id     | integer                  |
+
+ Column |           Type           
+--------|--------------------------
+ author | integer                  
+ title  | text                     
+ slug   | text                     
+ lead   | text                     
+ body   | text                     
+ time   | timestamp with time zone 
+ id     | integer                  
 
  Table "log"
- Column |           Type           |
---------+--------------------------+
- path   | text                     | 
- ip     | inet                     | 
- method | text                     | 
- status | text                     | 
- time   | timestamp with time zone |
- id     | integer                  | 
+
+ Column |           Type           
+--------|--------------------------
+ path   | text                      
+ ip     | inet                      
+ method | text                      
+ status | text                      
+ time   | timestamp with time zone 
+ id     | integer                  
