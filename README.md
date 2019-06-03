@@ -16,12 +16,12 @@ The database contains newspaper articles, as well as the web server log for the 
 Below are the snippets of the database:
 
 Table "authors"
- Column |  Type   |
+Column |  Type   |
 --------+---------+
  name   | text    |
- bio    | text    | 
+ bio    | text    |
  id     | integer |
-
+ 
 Table "articles"
  Column |           Type           |
 --------+--------------------------+
