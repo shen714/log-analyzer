@@ -3,6 +3,7 @@ import psycopg2
 
 DBNAME = "news"
 
+'''
 # views
 views = [
     '''create or replace view popular_paths as select path, count(*) from log where 
@@ -19,6 +20,8 @@ views = [
     '''create or replace view error_rate as select logs.date, round(((errors * 100.0) / views), 2) as
      percent from logs join errors on logs.date = errors.date;'''
 ]
+'''
+
 # queries
 top_three_articles = '''select title, count from articles join 
 popular_paths on popular_paths.path like '%' || articles.slug limit 3;'''
@@ -29,6 +32,7 @@ popular_authors = '''select name, sum(count) from authors join popular_article_t
 
 date_error_greater_than_one_percent = '''select date, percent from error_rate where percent > 1;'''
 
+'''
 def create_views(views):
     '''create views to make following code more concise'''
     db = psycopg2.connect(database=DBNAME)
@@ -37,6 +41,7 @@ def create_views(views):
         c.execute(view)
         db.commit()
     c.close()
+'''
 
 def get_result(query):
     '''connect to the database and get result based on input query'''
@@ -66,7 +71,7 @@ def get_most_error_date():
         print(str(date) + " -- " + str(percent) + "% " + "errors")
 
 if __name__ == '__main__':
-    create_views(views)
+    # create_views(views)
     get_top_three_articles()
     print("--------------------------------------")
     get_popular_authors()
