@@ -5,10 +5,29 @@ This project is an internal reporting tool which analyze useful information abou
 2. Who are the most popular article authors of all time?
 3. On which days did more than 1% of requests lead to errors?
 
-### Configurations
-1. Linux Environment(with psql 9.5.8)
-2. PostgresQL database system
-3. python 2.7
+### Instructions
+1. Install [Vagrant](https://www.vagrantup.com/), [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1), [python3](https://www.python.org/downloads/)
+2. Download the [sql file](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) in the vagrant directory.   
+3. Clone this repository in the vagrant directory.
+4. In the vagrant file, type following commands in the terminal:
+'''
+vagrant up
+vagrant ssh
+'''
+5. Load the database:
+```
+psql -d news -f newsdata.sql
+```
+6. Connect to the database:
+``` 
+psql -d news
+```
+7. Create views following the instruction below
+
+8. Run the code:
+'''
+python log_analysis.py
+'''
 
 ### Create views
 type the following commands in your terminal to creat view:
